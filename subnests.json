@@ -1,0 +1,616 @@
+[{
+	"id": 0x80034150, 
+	"subnests": [
+		{
+			"id": 0x00034151,
+			"struct": [
+				["Ih", "Unknown"],
+				["HX", "Visible Sections", "I+"],
+				["Ye", "Padding"]
+			]
+		},
+		{
+			"id": 0x00034152,
+			"struct": [
+				["YM", "Unknown"]
+			]
+		},
+		{
+			"id": 0x00034153,
+			"array": 0xA4,
+			"struct": [
+				["YE", null, 8],
+				["H", "Visible Section Id"],
+				["YE", null, 6],
+				["HX", "Entries", "I+"],
+				["YE", null, 144]
+			]
+		},
+		{
+			"id": 0x00034154,
+			"array": 0x20,
+			"struct": [
+				["YE", null, 8],
+				["I", "Track Id"],
+				["Ih", "Is Enabled?"],
+				["I", "Race Id?"],
+				["YE", null, 12]
+			]
+		},
+		{
+			"id": 0x00034155,
+			"array": 0x4c,
+			"struct": [
+				["YE", null, 8],
+				["Sx10", "Some Name"],
+				["HX", "Visible Section Ids", "H+"],
+				["YE", null, 0x32]
+			]
+		}
+	]
+}, {
+	"id": 0x80034100,
+	"subnests": [
+		{
+			"id": 0x00034101,
+			"struct": [
+				["YE", null, 12],
+				["I", "Scenery Number"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["YE", null, 32],
+				["Ih", "Unknown"]
+			]
+		},
+		{
+			"id": 0x00034102,
+			"array": 0x44,
+			"struct": [
+				["Sx20", "Name"],
+				["Ih", "Solid LOD A Hash"],
+				["Ih", "Solid LOD B Hash"],
+				["Ih", "Solid LOD C Hash"],
+				["Hh", "Solid LOD A Flags"],
+				["Hh", "Solid LOD B Flags"],
+				["YE", null, 12],
+				["T", "Radius"],
+				["Ih", "Hierarchy Key"]
+			]
+		},
+		{
+			"id": 0x00034103,
+			"array": 0x40,
+			"struct": [
+				["T", "Bound Box Min", "Vector3"],
+				["T", "Bound Box Max", "Vector3"],
+				["H", "Scenery Info"],
+				["Hh", "Instance Flags"],
+				["Ih", "Preculler Info Index"],
+				["T", "Position", "Vector3"],
+				["H", "Packed Rotation Matrix 1x1"],
+				["H", "Packed Rotation Matrix 1x2"],
+				["H", "Packed Rotation Matrix 1x3"],
+				["H", "Packed Rotation Matrix 2x1"],
+				["H", "Packed Rotation Matrix 2x2"],
+				["H", "Packed Rotation Matrix 2x3"],
+				["H", "Packed Rotation Matrix 3x2"],
+				["H", "Packed Rotation Matrix 3x2"],
+				["H", "Packed Rotation Matrix 3x3"],
+				["YE", null, 2]
+			]
+		},
+		{
+			"id": 0x00034104,
+			"array": 0x24,
+			"struct": [
+				["T", "Bound Box Min", "Vector3"],
+				["T", "Bound Box Max", "Vector3"],
+				["Hh", "Unknown"],
+				["Hh", "Unknown"],
+				["Hh", "Unknown"],
+				["Hh", "Unknown"],
+				["Hh", "Unknown"],
+				["Hh", "Unknown"]
+			]
+		},
+		{
+			"id": 0x00034105,
+			"array": 4,
+			"struct": [
+				["H", "Scenery Override Info"],
+				["H", "Per Scenery Id"]
+			]
+		},
+		{
+			"id": 0x0034106,
+			"array": 128
+		}
+	]
+}, {
+	"id": 0xb3300000,
+	"name": "TexturePack",
+	"subnests": [
+		{
+			"id": 0xb3310000,
+			"name": "TexturePackHeaderChunks",
+			"subnests": [
+				{
+					"id": 0x33310001,
+					"name": "TexturePackHeader",
+					"struct": [
+						["Im", "Version", [["Most Wanted", 4], ["Underground 2", 5], ["Carbon", 8], ["Undercover/World", 9]]],
+						["Sx1C", "Collection name"],
+						["Sx40", "Pipeline Path"],
+						["Ih", "Pipeline Path Hash"],
+						["YE", null, 24]
+					]
+				},
+				{
+					"id": 0x33310002,
+					"name": "TextureIndexEntry[]",
+					"array": 8,
+					"struct": [
+						["Ih", "Hash"],
+						["YE", null, 4]
+					]
+				},
+				{
+					"id": 0x33310003,
+					"name": "TextureStreamEntry[]",
+					"array": 24,
+					"struct": [
+						["Ih", "Texture Hash"],
+						["Ih", "Data Offset Relative to Start of Chunk 'TexturePack'"],
+						["I", "Compressed Data Size"],
+						["I", "Decompressed Size"],
+						["YE", null, 8]
+					]
+				}, 
+				{
+					"id": 0x33310004,
+					"name": "TextureInfo[]",
+					"array": 0x7C,
+					"struct": [
+						["YE", null, 12],
+						["Sx18", "Texture name"],
+						["Ih", "Name hash"],
+						["Ih", "Class hash"],
+						["Ih", "Image parent hash"],
+						["Ih", "Offset"],
+						["Ih", "Palette Offset"],
+						["Ih", "Size"],
+						["Ih", "Palette Size"],
+						["Ih", "Base Image Size"],
+						["H", "Width"],
+						["H", "Height"],
+						["Y", "Width Shift"],
+						["Y", "Height Shift"],
+						["Ym", "Compression", [["PAL8", 0x8], ["RGBA", 0x20], ["DXT1", 0x22], ["DXT3", 0x24], ["DXT5", 0x26], ["PAL8-64", 0x81]]],
+						["Y", "Palette Compression"],
+						["H", "Number of Palettes"],
+						["Y", "Mipmaps"],
+						["Y", "Tileable UV"],
+						["Y", "Bias Level"],
+						["Y", "Rendering Order"],
+						["Y", "Scroll Type"],
+						["Y", "Used Flags"],
+						["Y", "Apply Alpha Sort"],
+						["Y", "Alpha Usage Type"],
+						["Y", "Alpha Blend Type"],
+						["Y", "Flags"],
+						["H", "Scroll Timestep"],
+						["H", "Scroll SpeedS"],
+						["H", "Scroll SpeedT"],
+						["H", "OffsetS"],
+						["H", "OffsetT"],
+						["H", "ScaleS"],
+						["H", "ScaleT"],
+						["YE", null, 22]
+					]
+				},
+				{
+					"id": 0x33310005,
+					"name": "TextureInfoPlatInfo[]",
+					"array": 0x20,
+					"struct": [
+						["I", "Unknown"],
+						["I", "Unknown"],
+						["I", "Unknown"],
+						["I", "Unknown"],
+						["I", "Unknown"],
+						["Im", "Compression/FourCC", [["P8_32", 0x29], ["RGBA_32", 0x15], ["DXT1_32", 0x31545844], ["DXT3_32", 0x33545844], ["DXT5_32", 0x35545844]]],
+						["YE", null, 8]
+					]
+				}
+			]
+		},
+		{
+			"id": 0xb3320000,
+			"name": "TextureVRAMDataChunks",
+			"subnests": [
+				{
+					"id": 0x33320001,
+					"name": "TextureVRAMDataHeader",
+					"struct": [
+						["YE", null, 8],
+						["Ih", "Pipeline Path Hash"],
+						["YE", null, 4]
+					]
+				}
+			]
+		}
+	]
+}, {
+	"id": 0x80134000, 
+	"subnests": [
+		{
+			"id": 0x80134001,
+			"subnests": [
+				{
+					"id": 0x00134002,
+					"name": "eSolidListHeader",
+					"struct": [
+						["YE", null, 8],
+						["I", "Version"],
+						["I", "Number of Objects"],
+						["Sx38", "Pipeline Path"],
+						["Sx20", "Parent Section Name"],
+						["I", "Unknown Offset"],
+						["I", "Unknown Size"],
+						["I", "Object Align"],
+						["YE", null, 28]
+					]
+				},
+				{
+					"id": 0x00134003,
+					"name": "SolidIndexEntry[]",
+					"array": 8,
+					"struct": [
+						["Ih", "Object Id"],
+						["YE", null, 4]
+					]
+				}
+			]
+		}, {
+			"id": 0x80134010,
+			"subnests": [
+				{
+					"id": 0x00134011,
+					"struct": [
+						["YE", null, 12],
+						["Y", "Version"],
+						["YE", null, 1],
+						["Hh", "Flags"],
+						["Ih", "Object Name Hash"],
+						["H", "Number of Polygons"],
+						["H", "Number of Vertices"],
+						["Y", "Number of Bones"],
+						["Y", "Number of Textures"],
+						["Y", "Number of Shaders"],
+						["Y", "Number of Position Markers"],
+						["YE", null, 4],
+						["T", "Min", "Vector3"],
+						["YE", null, 4],
+						["T", "Max", "Vector3"],
+						["YE", null, 4],
+						["T", "Solid Matrix", "Matrix4"],
+						["YE", null, 20],
+						["T", "Volume"],
+						["T", "Density"],
+						["YE", null, 8],
+						["Sx1C", "Object Name"]
+					]
+				},
+				{
+					"id": 0x00134012,
+					"array": 8,
+					"struct": [
+						["Ih", "Hash"],
+						["YE", null, 4]
+					]
+				},
+				{
+					"id": 0x80134100,
+					"subnests": [
+						{
+							"id": 0x00134900,
+							"struct": [
+								["YE", null, 52],
+								["I", "Number of Vertices"],
+								["YE", null, 12]
+							]
+						},
+						{
+							"id": 0x00134b02,
+							"array": 60,
+							"struct": [
+								["T", "Min", "Vector3"],
+								["I", "Index Length"],
+								["T", "Max", "Vector3"],
+								["I", "Texture Index"],
+								["I", "Shader Index"],
+								["YE", null, 16],
+								["I", "Index Offset"],
+								["Ih", "Flags"]
+							]
+						}
+					]
+				},
+				{
+					"id": 0x0013401a,
+					"array": 0x50,
+					"struct": [
+						["Ih", "Key"],
+						["I", "Unknown"],
+						["I", "Unknown"],
+						["I", "Unknown"],
+						["T", "Matrix", "Matrix4"]
+					]
+				}
+			]
+		}
+	]
+}, {
+	"id": 0x8003b600,
+	"subnests": [
+		{
+			"id": 0x8003b601,
+			"subnests": [
+				{
+					"id": 0x0003b602,
+					"struct": [
+						["Ih", "Unknown"],
+						["Ih", "Unknown"],
+						["Ih", "Unknown"],
+						["Ih", "Unknown"],
+						["Ih", "Unknown"],
+						["Ih", "Unknown"],
+						["Ih", "Unknown"],
+						["Ih", "Unknown"],
+						["Ih", "Unknown"]
+					]
+				}
+			]
+		}
+	]
+}, {
+	"id": 0x80034020,
+	"subnests": [
+		{
+			"id": 0x00039200,
+			"struct": [
+				["YE", null, 8],
+				["Ih", "Hash?"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["I", "Vectex Count"],
+				["Mx20", "Name"],
+				["H", "Index Count"],
+				["Hh", "Unknown"],
+				["YE", null, 24]
+			]
+		},
+		{
+			"id": 0x00039201,
+			"array": 0x30,
+			"struct": [
+				["YE", null, 8],
+				["Hh", "Unknown"],
+				["Hh", "Unknown"],
+				["I", "Index"],
+				["T", "Vertex", "Vector3"],
+				["YE", null, 20]
+			]
+		},
+		{
+			"id": 0x00039202,
+			"raw": true,
+			"array": 6,
+			"struct": [
+				["H", "Vertice 1"],
+				["H", "Vertice 2"],
+				["H", "Vertice 3"]
+			]
+		}
+	]
+}, {
+	"id": 0x00034250,
+	"struct": [
+		["Lh", "Unknown"],
+		["Ih", "Version"],
+		["I", "Entries Count"],
+		["Yx64", "Entries"]
+	]
+}, {
+	"id": 0x00034110,
+	"array": 0x50,
+	"struct": [
+		["Sx8", "Section Name"],
+		["I", "Section Number"],
+		["YE", null, 4],
+		["Imh", "Is Section Usable", ["No", "Yes"]],
+		["Ih", "File Offset"],
+		["I", "Size"],
+		["I", "Compressed Size"],
+		["I", "Priority"],
+		["T", "Center", "Vector2"],
+		["T", "Radius"],
+		["Ih", "Checksum"],
+		["YE", null, 28]
+	]
+}, {
+	"id": 0x00034112,
+	"array": 0x10
+}, {
+	"id": 0x00034026,
+	"array": 0x100,
+	"struct": [
+		["YE", null, 8],
+		["Sx18", "Smokeable Name"],
+		["T", "Mass"],
+		["T", "Dimensions", "Vector3"],
+		["T", "Inertia Tensor", "Matrix4"],
+		["T", "Direction", "Vector3"],
+		["YE", "To Be Done", 0x34],
+		["T", "Center of Mass", "Vector3"]
+	]
+},{
+	"id": 0x00034027,
+	"struct": [
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["I", "Array Size"],
+		["Yx70", "Spawners"]
+	]
+}, {
+	"id": 0x00034146,
+	"array": 0x30,
+	"struct": [
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Route Hash"],
+		["Ih", "Route Node Index"],
+		["T", "Route Node Position", "Vector2"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Hh", "Unknown"],
+		["Hh", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"]
+	]
+}, {
+	"id": 0x00034107,
+	"name": "SceneryOverrideInfo[]",
+	"array": 8,
+	"struct": [
+		["H", "Scenery Section"],
+		["H", "Per Scenery Id"],
+		["Hh", "Flags"],
+		["Hh", "Unknown"]
+	]
+}, {
+	"id": 0x00034108,
+	"name": "SceneryGroup",
+	"dynamicArrayed": true,
+	"structAlign": 4,
+	"struct": [
+		["YE", null, 8],
+		["Sx20", "Name"],
+		["Ih", "Hash"],
+		["Ih", "Enabled"],
+		["HX", "Unknown (Id array)", "I+"]
+	]
+}, {
+	"id": 0x00035021,
+	"array": 4,
+	"struct": [["I", "Unknown"]]
+}, {
+	"id": 0x00034202,
+	"array": 0x110,
+	"struct": [
+		["Ih", "Unknown"],
+		["Mx18", "Name"]
+	]
+}, {
+	"id": 0x00e34010,
+	"struct": [["Sx10", "ELF Magic Bytes"]]
+}, {
+	"id": 0x00037080,
+	"struct": [
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"],
+		["Ih", "Unknown"]
+	]
+}, {
+	"id": 0x80034130,
+	"subnests": [
+		{
+			"id": 0x00034131,
+			"struct": [
+				["H", "Section Number"],
+				["Yh", "Flags 1"],
+				["Yh", "Flags 2"],
+				["H", "Width"],	
+				["H", "Height"],
+				["T", "Pivot", "Vector2"],
+				["T", "Min Boundary Box", "Vector4"],
+				["T", "Max Boundary Box", "Vector4"]
+			]
+		},
+		{
+			"id": 0x00034134,
+			"array": 32
+		},
+		{
+			"id": 0x00034136,
+			"array": 4
+		},
+		{
+			"id": 0x00034137,
+			"array": 4
+		}
+	]
+}, {
+	"id": 0x80135000,
+	"subnests": [
+		{
+			"id": 0x00135001,
+			"struct": [
+				["YE", null, 8],
+				["Hh", "Unknown"],
+				["O", "Swap Endian"],
+				["Yh", "Unknown"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["I", "BCHUNK_00135003 Entries"]
+			]
+		},
+		{
+			"id": 0x00135002,
+			"struct": [
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown Color?"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"],
+				["Ih", "Unknown"]
+			]
+		}
+	]
+}, {
+	"id": 0,
+	"ignore": true
+}]
